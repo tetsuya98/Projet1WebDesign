@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+main {
+    position: fixed;
+    margin-top:0px;
+    margin-top: 50px;
+    overflow-y: scroll;
+}
+.nav {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50px;
+    padding: 0px 20px;
+    background: #313336;
+}
+
+a .active {
+    color: white;
+}
+
+.nav .nav-header {
+    padding: 10px 10px;
+    height: 80px;
+    float: left;
+    font-size: 30px;
+    color: white;
+}
+
+
+.nav > .nav-links {
+    margin: 0;
+    display: inline;
+    float: right;
+    font-size: 18px;
+}
+
+.nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: gray;
+}
+
+
+
+.nav > #nav-check {
+    display: none;
+}
+
+
+.nav > #nav-check {
+    display: none;
+}
+
+.nav > .nav-btn {
+    display: none;
+}
+
+@media (max-width:700px) {
+    .nav > .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .nav > .nav-btn > label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #333;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow: hidden;
+        top: 50px;
+        left: 0px;
+    }
+    .nav > .nav-links > a {
+        display: block;
+        width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+        height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+}
+
+footer {
+    height: 70px;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    width: 100%;
+    background: #313336;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+.row {
+    display: -webkit-flex;
+    display: flex;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    border: solid 1px black;
+    border-radius: 5px;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 10px;
+    margin: 10px;
+    height: 300px;
+}
+
+.card-body {
+    padding: 10px 10px 10px 10px;
+}
+
+.card-footer {
+    border-top: solid 1px black;
+    width:100%;
+}
+
+.article {
+    padding: 20px;
+    text-align: center;
+    text-align: justify;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+button {
+    margin: 20px auto;
+    display: table;
+    color: white;
+    width: 200px;
+    height: 40px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    background: #1a528a;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    .row {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+
+#CSS Carousel
+.carousel-row {
+    position: relative;
+    margin-top:0px;
+    margin-top: 50px;
+    overflow-y: scroll;
+}
+
+.carousel {
+    position: relative;
+    height: 500px;
+    width: 70%;
+    margin: 50px auto 50px;
+    display: flow;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-track-container {
+    position:relative;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    opacity: 0.30;
+    z-index: 1;
+}
+
+.carousel-button--left {
+    left: -70px;
+}
+
+.carousel-button--right {
+    right: -70px;
+}
+
+.carousel-button img {
+    width: 50px;
+}
+
+.carousel-nav {
+    width: 80%;
+    transform: translateX(13%) translateY(-120%);
+    background-color: #1a528a;
+    opacity: 0.7;
+    padding: 10px 0;
+    justify-content: center;
+}
+
+.carousel-dot {
+    border: 0;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    margin: 0 5px;
+}
+
+.carousel-card h1 {
+    text-align: center;
+}
+
+.carousel-card p {
+    text-align: center;
+}
+
+.carousel-dots {
+    justify-content: center;
+    display: flex;
+}
+
+.carousel-dot:hover, .current-dot{
+    background-color: white;
+}
+
+.carousel-card {
+    justify-content: center;
+    color: white;
+    margin-left: 20px;
+    left: 50%;
+}
+
+
